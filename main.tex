@@ -1,0 +1,57 @@
+\documentclass{report}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{tabularx}
+\usepackage{xcolor}
+\usepackage[hungarian]{babel}
+\usepackage[pdfborder={0 0 0}]{hyperref}
+
+\newcommand{\kovAzon}[1]{\colorbox{gray!50}{#1}}
+
+\begin{document}
+%Title page
+\begin{titlepage}
+   \centering
+   \vspace{.7\baselineskip}
+   { \huge
+        Követelményelemzés 2024 ősz - 4. csoport \\[1em]
+        Segítség, építkezem! projekt \\[2em]
+        Szakemberek és termékek keresése \\ [5em]
+   }
+
+   Készítették: \\
+    Csüllög Benedek Szabolcs \\
+    Gábor László \\
+    Gál András \\
+    Gergely Dániel \\
+    Huszár Gergő \\
+    Laczkó Zsófia \\
+    Merth Borbála \\
+    Papp Lilla \\
+    Petes Márton \\
+    Rosta Benjamin \\
+    Sólyom Norbert \\
+    Turán Gergő \\
+    Varga Áron \\
+
+\end{titlepage}
+
+\tableofcontents
+
+\chapter{Projekt bemutatása}
+\input{parts/intro}
+
+\chapter{Követelmények}
+
+\input{parts/regisztracio}
+
+\input{parts/kateg_es_keres}
+
+\input{parts/termekek.tex}
+
+\input{parts/ajanlas}
+
+\input{parts/kedvezmenyek}
+
+\input{parts/kieg_es_alkalmazasi_pl}
+
+\end{document}
