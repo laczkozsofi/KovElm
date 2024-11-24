@@ -1,40 +1,40 @@
 \section{Regisztráció}
 
 
-A regisztráció során biztosítanunk kell szerepköröket $Sz_{\text{szám}}$, amivel kategorizálni tudjuk a felhasználókat. A felhasználóknak két csoportját különböztetjük meg: kivitelezők és ügyfelek. Ezeket a kategóriákat egy felhasználó egyszerre is felveheti ekkor külön nézet választóra lesz szükség. További szerepkör az adminisztrátor (oldal üzemeltetés), akinek validálnia kell a kivitelező által beállított kompetenciák hitelességét.
+A regisztráció során biztosítanunk kell szerepköröket ${Sz}_{sz\acute{a}m}$, amivel kategorizálni tudjuk a felhasználókat. A felhasználóknak két csoportját különböztetjük meg: kivitelezők és ügyfelek. Ezeket a kategóriákat egy felhasználó egyszerre is felveheti ekkor külön nézet választóra lesz szükség. További szerepkör az adminisztrátor (oldal üzemeltetés), akinek validálnia kell a kivitelező által beállított kompetenciák hitelességét.
 
 \subsection{Szerepkörök:}
 
 \begin{itemize}
-    \item $Sz_1$: Kivitelező
-    \item $Sz_2$: Ügyfél
-    \item $Sz_3$: Adminisztrátor
+    \item ${Sz}_1$: Kivitelező
+    \item ${Sz}_2$: Ügyfél
+    \item ${Sz}_3$: Adminisztrátor
 \end{itemize}
 
-A szükséges adatok $SA_{\text{szám}}$ megadásakor minden felhasználónak kötelező a név és életkor kitöltése. Kivitelezőknél mindenképpen megadásra kell kerülnie a kompetenciáknak, végzettségnek, ezeket előre megadott listából tudják kiválasztani. A munkatapasztalat megadásánál is vannak kötelező adatok: a munkával töltött évek száma, és a munkáihoz tartozó referencia, amelynek visszakövethetőnek kell lennie, ezt szintén ellenőrzésre fog kerülni az adminisztrátor által. Majd egy szerződés, amellyel biztosításra kerül a fizetési kötelezettség. Opcionálisan megadható lesz a szakembernek földrajzi helyzetének adatai.
+A szükséges adatok ${SA}_{sz\acute{a}m}$ megadásakor minden felhasználónak kötelező a név és életkor kitöltése. Kivitelezőknél mindenképpen megadásra kell kerülnie a kompetenciáknak, végzettségnek, ezeket előre megadott listából tudják kiválasztani. A munkatapasztalat megadásánál is vannak kötelező adatok: a munkával töltött évek száma, és a munkáihoz tartozó referencia, amelynek visszakövethetőnek kell lennie, ezt szintén ellenőrzésre fog kerülni az adminisztrátor által. Majd egy szerződés, amellyel biztosításra kerül a fizetési kötelezettség. Opcionálisan megadható lesz a szakembernek földrajzi helyzetének adatai.
 
 \subsection{Szükséges adatok:}
 
 \begin{itemize}
     \item Mindenkinek:
     \begin{itemize}
-        \item $SA_1$: Név
-        \item $SA_2$: Életkor
+        \item ${SA}_1$: Név
+        \item ${SA}_2$: Életkor
     \end{itemize}
     \item Kivitelezőknek:
     \begin{itemize}
-        \item $SA_3$: Kompetencia
-        \item $SA_4$: Végzettség
-        \item $SA_5$: Munkatapasztalat
+        \item ${SA}_3$: Kompetencia
+        \item ${SA}_4$: Végzettség
+        \item ${SA}_5$: Munkatapasztalat
         \begin{itemize}
-            \item $SA_{5.1}$: Évek száma
-            \item $SA_{5.1}$: Referencia
+            \item ${SA}_{5.1}$: Évek száma
+            \item ${SA}_{5.1}$: Referencia
         \end{itemize}
     \end{itemize}
     
     \item Megadható:
     \begin{itemize}
-        \item $SA_6$: Földrajzi helyzet
+        \item ${SA}_6$: Földrajzi helyzet
     \end{itemize}
 \end{itemize}
 
