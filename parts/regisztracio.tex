@@ -1,1 +1,70 @@
 \section{Regisztráció}
+
+
+A regisztráció során biztosítanunk kell szerepköröket $Sz_{\text{szám}}$, amivel kategorizálni tudjuk a felhasználókat. A felhasználóknak két csoportját különböztetjük meg: kivitelezők és ügyfelek. Ezeket a kategóriákat egy felhasználó egyszerre is felveheti ekkor külön nézet választóra lesz szükség. További szerepkör az adminisztrátor (oldal üzemeltetés), akinek validálnia kell a kivitelező által beállított kompetenciák hitelességét.
+
+\subsection{Szerepkörök:}
+
+\begin{itemize}
+    \item $Sz_1$: Kivitelező
+    \item $Sz_2$: Ügyfél
+    \item $Sz_3$: Adminisztrátor
+\end{itemize}
+
+A szükséges adatok $SA_{\text{szám}}$ megadásakor minden felhasználónak kötelező a név és életkor kitöltése. Kivitelezőknél mindenképpen megadásra kell kerülnie a kompetenciáknak, végzettségnek, ezeket előre megadott listából tudják kiválasztani. A munkatapasztalat megadásánál is vannak kötelező adatok: a munkával töltött évek száma, és a munkáihoz tartozó referencia, amelynek visszakövethetőnek kell lennie, ezt szintén ellenőrzésre fog kerülni az adminisztrátor által. Majd egy szerződés, amellyel biztosításra kerül a fizetési kötelezettség. Opcionálisan megadható lesz a szakembernek földrajzi helyzetének adatai.
+
+\subsection{Szükséges adatok:}
+
+\begin{itemize}
+    \item Mindenkinek:
+    \begin{itemize}
+        \item $SA_1$: Név
+        \item $SA_2$: Életkor
+    \end{itemize}
+    \item Kivitelezőknek:
+    \begin{itemize}
+        \item $SA_3$: Kompetencia
+        \item $SA_4$: Végzettség
+        \item $SA_5$: Munkatapasztalat
+        \begin{itemize}
+            \item $SA_{5.1}$: Évek száma
+            \item $SA_{5.1}$: Referencia
+        \end{itemize}
+    \end{itemize}
+    
+    \item Megadható:
+    \begin{itemize}
+        \item $SA_6$: Földrajzi helyzet
+    \end{itemize}
+\end{itemize}
+
+A regisztrációnál egyedi felhasználó nevet, ami alapján azonosítani lehet a felhasználót és egy megfelelő erősségű jelszót kell megadnia az új felhasználónak, mellyel biztonságosan be tud lépni a fiókjába.
+
+\subsection{Jelszó kritériumai:}
+
+\begin{itemize}
+    \item $J_1$: legalább 8 karakter
+    \item $J_2$: legalább 1 számot kell tartalmaznia
+    \item $J_3$: legalább 1 speciális karakternek kell benne szerepelnie
+    \item $J_4$: legalább 1 nagy és 1 kisbetűt kell tartalmaznia
+    \item $J_5$: kétszer ugyanazt a jelszót kell megadni
+\end{itemize}
+
+\subsection{Felhasználónév kritériumai:}
+
+\begin{itemize}
+    \item $F_1$: egyedinek kell lennie
+    \item $F_2$: nem szerepelhet benne sértő szó
+\end{itemize}
+
+A regisztráció során szükség van az általános felhasználói szerződés elfogadására.
+
+\subsection{ÁFSZ:}
+
+\begin{itemize}
+    \item $A_1$: az ÁFSZ-nek elérhetőnek kell lennie
+    \item $A_2$: a felhasználónak ki kell pipálnia egy checkboxot, amivel kijelenti, hogy megismerte és elfogadta a szerződésben foglaltakat.
+\end{itemize}
+
+A regisztráció végén a felhasználó kap egy emailt, amivel meg kell erősítenie a regisztráció során megadott email címet.
+
