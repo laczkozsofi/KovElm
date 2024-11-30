@@ -4,7 +4,7 @@
 \section{Regisztráció}
 
 
-A regisztráció során biztosítanunk kell szerepköröket ${Sz}_{sz\acute{a}m}$, amivel kategorizálni tudjuk a felhasználókat (\kovAzon{R\_\sorSzamR}). A felhasználóknak két csoportját különböztetjük meg: szakemberek és ügyfelek. Ezeket a kategóriákat egy felhasználó egyszerre is felveheti, ekkor külön nézet választóra lesz szükség (\kovAzon{R\_\sorSzamR}). További szerepkör az adminisztrátor (oldal üzemeltetés), akinek validálnia kell a kivitelező által beállított kompetenciák hitelességét (\kovAzon{R\_\sorSzamR}).
+A regisztráció során biztosítanunk kell szerepköröket ${Sz}_{sz\acute{a}m}$, amivel kategorizálni tudjuk a felhasználókat (\kovAzon{R\_\sorSzamR}). A felhasználóknak két csoportját különböztetjük meg: szakemberek és ügyfelek. Egy felhasználó egyszerre mindkét csoportba is tartozhat, ekkor külön nézet választóra lesz szükség (\kovAzon{R\_\sorSzamR}). További szerepkör az adminisztrátor (oldal üzemeltetés), ezen szerepkörbe tartozó személyeknek validálniuk kell a kivitelező által beállított kompetenciák, korábbi referenciák hitelességét (\kovAzon{R\_\sorSzamR}).
 
 \subsection{Szerepkörök}
 
@@ -14,44 +14,41 @@ A regisztráció során biztosítanunk kell szerepköröket ${Sz}_{sz\acute{a}m}
     \item ${Sz}_3$: Adminisztrátor
 \end{itemize}
 
-A szükséges adatok ${SA}_{sz\acute{a}m}$ megadásakor minden felhasználónak kötelező a név és életkor kitöltése (\kovAzon{R\_\sorSzamR}). Szakembereknél mindenképpen megadásra kell kerülnie a kompetenciáknak, végzettségnek, ezeket előre megadott listából tudják kiválasztani. A munkatapasztalat megadásánál is vannak kötelező adatok: a munkával töltött évek száma, és a munkáihoz tartozó referencia, amelynek visszakövethetőnek kell lennie, ezt szintén ellenőrzésre fog kerülni az adminisztrátor által (\kovAzon{R\_\sorSzamR}). Majd egy szerződés, amellyel biztosításra kerül a fizetési kötelezettség (\kovAzon{R\_\sorSzamR}). Opcionálisan megadható lesz a szakembernek földrajzi helyzetének adatai (\kovAzon{R\_\sorSzamR}).
+A szükséges adatok ${SA}_{sz\acute{a}m}$ közül minden felhasználónak kötelező a név, életkor és email cím kitöltése (\kovAzon{R\_\sorSzamR}). Szakembereknél ezen felül megadásra kell kerülnie a kompetenciáknak, végzettségnek. Ezeket előre megadott listából tudják kiválasztani, azonban ez a lista bővíthető kell legyen adminisztrátor által. A munkatapasztalat meghatározásához is kötelező megadni bizonyos adatokat: a munkával töltött évek számát, az egyéni vagy csoportos munkák referenciáit. Ezeknek a hitelessége szintén ellenőrzésre fog kerülni az adminisztrátor által, például szerződések ellenőrzésével (\kovAzon{R\_\sorSzamR}). Szükséges még egy szerződés elfogadása és aláírása az oldal működtetőivel, amellyel biztosításra kerül a fizetési kötelezettség (\kovAzon{R\_\sorSzamR}). Opcionálisan megadható még a szakember földrajzi helyzete a könnyebb kereshetőség érdekében (\kovAzon{R\_\sorSzamR}).
 
 \subsection{Szükséges adatok}
 
 \begin{itemize}
-    \item Mindenkinek:
+    \item Minden felhasználónak:
     \begin{itemize}
         \item ${SA}_1$: Név
         \item ${SA}_2$: Életkor
+        \item ${SA}_3$: Email cím
     \end{itemize}
-    \item Szakembereknek:
+    \item Szakembereknek ezen felül:
     \begin{itemize}
-        \item ${SA}_3$: Kompetencia
-        \item ${SA}_4$: Végzettség
-        \item ${SA}_5$: Munkatapasztalat
+        \item ${SA}_4$: Kompetencia
+        \item ${SA}_5$: Végzettség
+        \item ${SA}_6$: Munkatapasztalat
         \begin{itemize}
-            \item ${SA}_{5.1}$: Évek száma
-            \item ${SA}_{5.1}$: Referencia
+            \item ${SA}_{6.1}$: Évek száma
+            \item ${SA}_{6.2}$: Referencia
         \end{itemize}
-        \item  ${SA}_6$: Profilkép
-    \end{itemize}
-    
-    \item Megadható:
-    \begin{itemize}
-        \item ${SA}_6$: Földrajzi helyzet
+        \item  ${SA}_7$: Profilkép
+        \item ${SA}_8$: Földrajzi helyzet (Opcionális)
     \end{itemize}
 \end{itemize}
 
-A regisztrációnál egyedi felhasználó nevet, illetve egy megfelelő erősségű jelszót kell megadnia az új felhasználónak, ami alapján egyértelműen azonosítani lehet, illetve biztonságosan be tud lépni a fiókjába (\kovAzon{R\_\sorSzamR}).
+A regisztráció során egyedi felhasználó nevet, illetve egy megfelelő erősségű jelszót kell megadnia az új felhasználónak, ami alapján egyértelműen azonosítani lehet, illetve biztonságosan be tud lépni a fiókjába (\kovAzon{R\_\sorSzamR}).
 
 \subsection{Jelszó kritériumai}
 
 \begin{itemize}
-    \item $J_1$: legalább 8 karakter
-    \item $J_2$: legalább 1 számot kell tartalmaznia
-    \item $J_3$: legalább 1 speciális karakternek kell benne szerepelnie
-    \item $J_4$: legalább 1 nagy és 1 kisbetűt kell tartalmaznia
-    \item $J_5$: kétszer ugyanazt a jelszót kell megadni
+    \item $J_1$: legalább 8 karakter hosszúságú
+    \item $J_2$: legalább 1 szám értéket tartalmaz
+    \item $J_3$: legalább 1 speciális karaktert tartalmaz
+    \item $J_4$: legalább 1 nagy és 1 kisbetűt tartalmaz
+    \item $J_5$: kétszer meg kell adni ugyanazt a jelszót
 \end{itemize}
 
 \subsection{Felhasználónév kritériumai}
@@ -70,7 +67,7 @@ A regisztráció során szükség van az általános szerződési feltételek el
     \item $A_2$: A felhasználónak ki kell pipálnia egy jelölőnégyzetet, amivel kijelenti, hogy megismerte és elfogadta a szerződésben foglaltakat (\kovAzon{R\_\sorSzamR}).
 \end{itemize}
 
-A regisztráció végén a felhasználó kap egy emailt, amivel meg kell erősítenie a regisztráció során megadott email címet (\kovAzon{R\_\sorSzamR}).
+A regisztráció végén a felhasználó kap egy email értesítést, amivel meg kell erősítenie a regisztráció során megadott email címet (\kovAzon{R\_\sorSzamR}).
 
 \begin{figure}[h]
 	\centering

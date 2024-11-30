@@ -10,23 +10,31 @@ Az oldalra regisztrált szakemberek előre definiált kategóriákba kerülnek b
      \item Műszaki ellenőr.
 \end{itemize}
 
-Minden főkategóriának vannak alkategóriái, melyek listája nincsen rögzítve, hanem bármikor bővíthető az új technológiák vagy szakmák megjelenésével. Az alkategóriák közé tartozhat például az ács, amelynek fő kategóriája a kivitelező, vagy éppen a belsőépítészeti tervező, amely pedig a Tervező kategória alkategóriája. Ezen listák bővítését csak az adminisztrátor jogú felhasználók az erre biztosított oldalon végezhetik el (\kovAzon{Ka\_\sorSzamK}). Minden alkategória hozzáadásánál pedig meg kell adniuk az adminisztrátoroknak, hogy mely főkategóriába tartozik az adott elem.
+Minden főkategóriának vannak alkategóriái, melyek listája nincsen rögzítve, hanem bármikor bővíthető az új technológiák vagy szakmák megjelenésével. Az alkategóriák közé tartozhat például az ács, amely a Kivitelező főkategóriába sorolandó, vagy éppen a belsőépítészeti tervező, amely pedig a Tervező főkategória alkategóriája kell legyen. Ezen listák bővítését csak az adminisztrátor jogú felhasználók végezhetik el az erre biztosított oldalon (\kovAzon{Ka\_\sorSzamK}). Minden alkategória hozzáadásánál meg kell adniuk az adminisztrátoroknak, hogy mely főkategóriába tartozik az adott elem.
 
 
 \newcounter{Szcounter}
 \newcommand{\sorSzamSz}{\stepcounter{Szcounter}\theSzcounter}
 \subsection{Szakemberek keresése}
 
-A "Segítség, építkezem!" weboldalnak két kereső oldallal rendelkezik, melyek közül az egyik feladata, hogy a felhasználó megtalálja a számára legalkalmasabb szakembert/szakembereket (\kovAzon{Sz\_\sorSzamSz}). Erre több előre definiált szűrő és egy általános kereső lesz a felhasználó segítségére (\kovAzon{Sz\_\sorSzamSz}). Az előre definiált szűrőkkel a szakemberek 
+A "Segítség, építkezem!" weboldal két kereső oldallal rendelkezik, melyek közül az egyik feladata, hogy a felhasználó megtalálja a számára legalkalmasabb szakembert/szakembereket (\kovAzon{Sz\_\sorSzamSz}). Erre több előre definiált szűrő és egy általános kereső lesz a felhasználó segítségére (\kovAzon{Sz\_\sorSzamSz}). Az előre definiált szűrőkkel a szakemberek 
 \begin{itemize}
      \item nevére,
-     \item fő- és alkategóriákra,
+     \item fő- és alkategóriáira,
      \item földrajzi helyére (megyei szinten),
      \item értékelésére,
      \item általa használt termékekre,
      \item általa nyújtott szolgáltatásokra,
 \end{itemize}
-tud szűkíteni a felhasználó, míg az általános keresővel a szakember összes publikus adatai között tud keresni a felhasználó.
+tud szűkíteni a felhasználó, míg az általános keresővel a szakember összes publikus adata között tud keresni.
+\clearpage
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.6]{img/szakember_keres.png}
+	\caption*{Szakember keresése}
+	\label{fig:szak_ker}
+\end{figure}
 
 A keresés eredményében megjelenítésre kerül (\kovAzon{Sz\_\sorSzamSz}) egy-egy szakember
 \begin{itemize}
@@ -34,18 +42,12 @@ A keresés eredményében megjelenítésre kerül (\kovAzon{Sz\_\sorSzamSz}) egy
      \item profilképe,
      \item egy link a referenciáira.
 \end{itemize}
-A keresési eredmények rendezhetőek is a szakember értékelése, és a referenciának száma alapján (\kovAzon{Sz\_\sorSzamSz}).
+
+A keresési eredmények rendezhetőek is a szakember értékelése és a referenciák száma alapján (\kovAzon{Sz\_\sorSzamSz}).
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[scale=0.5]{img/szakember_keres.png}
-	\caption*{Szakember keresése}
-	\label{fig:szak_ker}
-\end{figure}
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[scale=0.5]{img/szakember_eredmeny.png}
+	\includegraphics[scale=0.6]{img/szakember_eredmeny.png}
 	\caption*{Szakember keresési eredmény}
 	\label{fig:szak_ker_ered}
 \end{figure}

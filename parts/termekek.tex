@@ -22,12 +22,11 @@ A weboldalon a termékek kategóriái és alkategóriái munkafázisok, anyagok 
             \item Hőszigetelés
         \end{itemize}
 \end{enumerate}
- % úgy emélkeszem erről beszélt, tégla, kötő anyag, üveg stb
 
 A oldal rendelkezik egy belső adatbázissal, amiben a termékeket tárolja (\kovAzon{T\_\sorSzam}). A gyűjteményben való böngészés során a szakemberek kereséséhez hasonlóan lehetőség van előre meghatározott szűrőket használni, illetve szabad szavas kereső is rendelkezésre áll (\kovAzon{T\_\sorSzam}). \\
 A szűrők a termékek adatai alapján a következők lehetnek:
 \begin{itemize}
-    \item név,
+    \item termék neve,
     \item termék főkategóriája,
     \item termék alkategória a főkategórián belül,
     \item paraméterek (a termék kategóriájától függően),
@@ -36,8 +35,23 @@ A szűrők a termékek adatai alapján a következők lehetnek:
 \end{itemize}
 A keresési találatokat lehetőség van rendezni is (\kovAzon{T\_\sorSzam}). A rendezési szempontok a termékek kategóriájának megfelelően változnak, például falazásnál teherbíró képesség, szállítási idő.
 
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5]{img/termek_keres.png}
+	\caption*{Termék keresése}
+	\label{fig:term_ker}
+\end{figure}
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.4]{img/termek_eredmeny.png}
+	\caption*{Termék keresési eredménye}
+	\label{fig:term_ker_ered}
+\end{figure}
+
+\clearpage
 \subsection{Termékek bővítése, módosítása}
-A weboldal belső adatbázisa a szakemberek javaslatai alapján kerül kialakításra, bővítésre (\kovAzon{T\_\sorSzam}). A szakembereknek lehetőségük van előterjeszteni egy terméket a megfelelő adatokkal, amit majd az adminisztrátorok hagyhatnak jóvá. \\
+A weboldal belső adatbázisa a szakemberek javaslatai alapján kerül kialakításra, bővítésre (\kovAzon{T\_\sorSzam}). A szakembereknek lehetőségük van előterjeszteni egy terméket a megfelelő adatokkal, ami majd az adminisztrátorok által kerül jóváhagyásra vagy elutasításra. \\
 Az új termékek esetén a következő adatokat kell megadni (\kovAzon{T\_\sorSzam}):
 \begin{itemize}
     \item név,
@@ -61,29 +75,10 @@ Egy termék módosításról az érintettek értesítést kapnak (\kovAzon{T\_\s
 
 
 \subsection{Szakemberek kapcsolata a termékekkel}
-A szakembereknek lehetőségük van magukhoz rendelni az adatbázisban szereplő termékeket (\kovAzon{T\_\sorSzam}), amelyekkel van tapasztalatuk. A termékek oldalán megjelenítésre kerül, hogy mely mesteremberek dolgoztak már ezzel, illetve a szakemberek profilján is megtekinthető, hogy milyen termékekkel van gyakorlatuk (\kovAzon{T\_\sorSzam}).
+A szakembereknek lehetőségük van magukhoz rendelni azokat az adatbázisban szereplő termékeket (\kovAzon{T\_\sorSzam}), amelyekkel van tapasztalatuk. A termékek oldalán megjelenítésre kerül, hogy mely mesteremberek dolgoztak már ezzel, illetve a szakemberek profilján is megtekinthető, hogy milyen termékekkel van gyakorlatuk (\kovAzon{T\_\sorSzam}).
 
 \subsection{Külső kapcsolatok}
-A belső adatbázis mellett az oldal lehetőséget biztosít külső adatbázissal való összeköttetés létesítésére is (\kovAzon{T\_\sorSzam}). Lehet például partnerségi kapcsolatot kialakítani építőanyag kereskedőkkel, beszállítókkal. Kapcsolatot kialakítására a szakemberek tehetnek javaslatot, de a tényleges megvalósításhoz kell az üzemeltetőtől jóváhagyás, moderálás (\kovAzon{T\_\sorSzam}).
+A belső adatbázis mellett az oldal lehetőséget biztosít külső adatbázissal való összeköttetés létesítésére is (\kovAzon{T\_\sorSzam}). Lehet például partnerségi kapcsolatot kialakítani építőanyag kereskedőkkel, beszállítókkal. Kapcsolatok kialakítására a szakemberek tehetnek javaslatot, de a tényleges megvalósításhoz kell jóváhagyás, moderálás az üzemeltetőtől (\kovAzon{T\_\sorSzam}).
 
 
-A külső adatbázisokból a termékek importálásra kerülnek, és kereshetővé válnak az oldal felhasználói számára (\kovAzon{T\_\sorSzam}).
-
-% technológiákról elég sokat kérdeztünk, azok hova fognak bekerülni?
-% Borka: Ide kellene, hiszen ehhez köthető. Minden termék egy technológia alá tartozik... Természetesen csak az kell, ami releváns.
-% Zsófi: azért nem írtam a technológiákról, mert úgy éreztem, hogy az a tudásbázissal együtt egy másik csapathoz tartozik inkább
-
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[scale=0.6]{img/termek_keres.png}
-	\caption*{Termék keresése}
-	\label{fig:term_ker}
-\end{figure}
-
-\begin{figure}[h]
-	\centering
-	\includegraphics[scale=0.5]{img/termek_eredmeny.png}
-	\caption*{Termék keresési eredmény}
-	\label{fig:term_ker_ered}
-\end{figure}
+A külső adatbázisokból a termékek importálásra kerülnek, és kereshetőek lesznek az oldal felhasználói számára (\kovAzon{T\_\sorSzam}).
