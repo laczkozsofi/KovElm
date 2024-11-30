@@ -3,21 +3,21 @@
 
 \section{Kategóriák és keresés}
 \subsection{Kategóriák}
-Az oldalra regisztrált szakemberek előre definiált kategóriákba kerülnek besorolásra tudásuk és vegzettségeik alapján (\kovAzon{K\_\sorSzamK}). Egy szakember egyszerre több kategóriába is besorolható, továbbá bármilyen kombináció fennálhat a hozzájuk rendelt kategóriák között. Ezen kategoriák közül három különleges szerepet tölt be. Ezen elemek a főkategóriák és a következő névvel rendelkeznek a rendszerben (\kovAzon{K\_\sorSzamK}):
+Az oldalra regisztrált szakemberek előre definiált kategóriákba kerülnek besorolásra tudásuk és végzettségeik alapján (\kovAzon{Ka\_\sorSzamK}). Egy szakember egyszerre több kategóriába is besorolható, továbbá bármilyen kombináció fennállhat a hozzájuk rendelt kategóriák között. Ezen kategóriák közül három különleges szerepet tölt be. Ezen elemek a főkategóriák és a következő névvel rendelkeznek a rendszerben (\kovAzon{Ka\_\sorSzamK}):
 \begin{itemize}
      \item Tervező,
      \item Kivitelező,
      \item Műszaki ellenőr.
 \end{itemize}
 
-Minden főkategóriának vannak alkategóriái, melyek listája nincsen rögzítve, hanem bármikor bővíthető az új technológiák vagy szakmák megjelenésével. Az alkategóriák közé tartozhat például az ács, amelynek fő kategoriája a kivitelező, vagy éppen a belsőépítészeti tervező, amely pedig a Tervező kategória alkategóriája. Ezen listák bővítését csak az adminisztrátor jogú felhasználok az erre biztosított oldalon végezhetik el (\kovAzon{K\_\sorSzamK}). Minden alkategóri hozzáadásánál pedig meg kell adniuk az adminisztátoroknak, hogy mely főkategóriába tartozik az adott elem.
+Minden főkategóriának vannak alkategóriái, melyek listája nincsen rögzítve, hanem bármikor bővíthető az új technológiák vagy szakmák megjelenésével. Az alkategóriák közé tartozhat például az ács, amelynek fő kategóriája a kivitelező, vagy éppen a belsőépítészeti tervező, amely pedig a Tervező kategória alkategóriája. Ezen listák bővítését csak az adminisztrátor jogú felhasználok az erre biztosított oldalon végezhetik el (\kovAzon{Ka\_\sorSzamK}). Minden alkategória hozzáadásánál pedig meg kell adniuk az adminisztrátoroknak, hogy mely főkategóriába tartozik az adott elem.
 
 
 \newcounter{Szcounter}
 \newcommand{\sorSzamSz}{\stepcounter{Szcounter}\theSzcounter}
 \subsection{Szakemberek keresése}
 
-A "Segítség, építkezem!" weboldalnak két kereső oldallal rendelkezik, melyek közül az egyik feladata, hogy a felhasználó megtalálja a számárá legalkalmasabb szakembert/szakembereket (\kovAzon{Sz\_\sorSzamSz}). Erre több előre definiált szűrő és egy általános kereső lesz a felhasználó segítségére (\kovAzon{Sz\_\sorSzamSz}). Az előre definiált szűrökkel a szakemberek 
+A "Segítség, építkezem!" weboldalnak két kereső oldallal rendelkezik, melyek közül az egyik feladata, hogy a felhasználó megtalálja a számára legalkalmasabb szakembert/szakembereket (\kovAzon{Sz\_\sorSzamSz}). Erre több előre definiált szűrő és egy általános kereső lesz a felhasználó segítségére (\kovAzon{Sz\_\sorSzamSz}). Az előre definiált szűrökkel a szakemberek 
 \begin{itemize}
      \item nevére,
      \item fő- és alkategóriákra,
@@ -31,10 +31,10 @@ tud szűkíteni a felhasználó. Míg az általános keresővel a szakember öss
 A keresés eredményében megjelenítésre kerül (\kovAzon{Sz\_\sorSzamSz}) egy-egy szakember
 \begin{itemize}
      \item neve,
-     \item profil képe,
+     \item profilképe,
      \item egy link a referenciáira.
 \end{itemize}
-A keresési eremények rendezhetőek is az szakember értékelése, és a referenciának száam alapján (\kovAzon{Sz\_\sorSzamSz}).
+A keresési eredmények rendezhetőek is a szakember értékelése, és a referenciának száma alapján (\kovAzon{Sz\_\sorSzamSz}).
 
 \begin{figure}[h]
 	\centering

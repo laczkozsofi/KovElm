@@ -26,6 +26,36 @@ A specifikáció az alábbi szempontok alapján készült:
     \end{itemize}
     \item Termékek keresése a tudásbázisban szereplő technológiákhoz kapcsolódóan
     \item Ajánlási rendszer, referenciák kezelése mind szakemberek, mind termékek esetében
-    \item Aktív részvételellel kedvezmények szerzése
+    \item Aktív részvétellel kedvezmények szerzése
     \item A specifikációt alkalmazási példa ismertetésével tegye teljessé!
 \end{enumerate}
+
+\section{Definíciók}
+\subsection{Követelmények azonosítása}
+A követelmények egyedi azonosítására az \kovAzon{A\_ID} formátumot használjuk, ahol "A" a követelmények részkategóriáját azonosítja, az "ID" pedig az azon belüli követelmény azonosító.
+A követelmények részkategóriái:
+\begin{itemize}
+    \item R: Regisztráció követelményei
+    \item Ka: Kategóriák és keresés követelményei
+    \item Sz: Szakemberek keresése
+    \item T: Termékek és tudásbázis követelményei
+    \item A: Ajánlási rendszer követelményei
+    \item Ke: Kedvezmények követelményei
+    \item Ki: Kiegészítő kérdések, specifikáció alkalmazási példa követelményei
+\end{itemize}
+
+\subsection{Típusok}
+Háromféle típust különböztetünk meg a “Segítség, építkezem!” weboldallal kapcsolatban:
+\begin{enumerate}
+    \item Szám típus, amely általában egész számokat tartalmaz, de tartalmazhat valós számokat is.
+    \item Szöveg típus, amely ritka, viszonylag egyedi szöveges értéket tartalmaz, például a szakemberek esetében a nevük.
+    \item Felsorolás típus, amely magát az adatot szövegesen tárolja, viszont ez a típus már gyakran ismétlődő adatokat reprezentál, például a szakemberek esetében a fő- és alkategóriák megnevezései.
+\end{enumerate}
+
+Ezeken kívül lehetnek más típusok is, például kép típus a szakemberek esetében, de ezek a típusok csakis tárolásra, valamint megjelenítésre fognak kerülni a weboldalon, semmi más funkcionalitás nincs elvárva ezekkel a megnevezetlen típusokkal kapcsolatban.
+
+
+\subsection{További definíciók}
+\textbf{Szakember kereső:} a “Segítség, építkezem!” weboldalon belül az a weblap, amely a szakemberek keresését teszi lehetővé.\\
+\textbf{Termék kereső:} a “Segítség, építkezem!” weboldalon belül az a weblap, amely a termékek keresését teszi lehetővé.\\
+\textbf{Alapértelmezett érték:} ha egy értéket a felhasználó szolgáltatna a weboldalnak, de a felhasználó még nem tudta, vagy még nem akarta ezt az értéket szolgáltatni, akkor a weboldal a megnevezett alapértelmezett értéket használja a funkcionalitásaiban, amíg a felhasználó nem szolgáltat más értéket.

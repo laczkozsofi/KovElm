@@ -1,9 +1,12 @@
+\newcounter{Rcounter}
+\newcommand{\sorSzamR}{\stepcounter{Rcounter}\theRcounter}
+
 \section{Regisztráció}
 
 
-A regisztráció során biztosítanunk kell szerepköröket ${Sz}_{sz\acute{a}m}$, amivel kategorizálni tudjuk a felhasználókat. A felhasználóknak két csoportját különböztetjük meg: szakemberek és ügyfelek. Ezeket a kategóriákat egy felhasználó egyszerre is felveheti, ekkor külön nézet választóra lesz szükség. További szerepkör az adminisztrátor (oldal üzemeltetés), akinek validálnia kell a kivitelező által beállított kompetenciák hitelességét.
+A regisztráció során biztosítanunk kell szerepköröket ${Sz}_{sz\acute{a}m}$, amivel kategorizálni tudjuk a felhasználókat (\kovAzon{R\_\sorSzamR}). A felhasználóknak két csoportját különböztetjük meg: szakemberek és ügyfelek. Ezeket a kategóriákat egy felhasználó egyszerre is felveheti, ekkor külön nézet választóra lesz szükség (\kovAzon{R\_\sorSzamR}). További szerepkör az adminisztrátor (oldal üzemeltetés), akinek validálnia kell a kivitelező által beállított kompetenciák hitelességét (\kovAzon{R\_\sorSzamR}).
 
-\subsection{Szerepkörök:}
+\subsection{Szerepkörök}
 
 \begin{itemize}
     \item ${Sz}_1$: Szakember
@@ -11,9 +14,9 @@ A regisztráció során biztosítanunk kell szerepköröket ${Sz}_{sz\acute{a}m}
     \item ${Sz}_3$: Adminisztrátor
 \end{itemize}
 
-A szükséges adatok ${SA}_{sz\acute{a}m}$ megadásakor minden felhasználónak kötelező a név és életkor kitöltése. Szakembereknél mindenképpen megadásra kell kerülnie a kompetenciáknak, végzettségnek, ezeket előre megadott listából tudják kiválasztani. A munkatapasztalat megadásánál is vannak kötelező adatok: a munkával töltött évek száma, és a munkáihoz tartozó referencia, amelynek visszakövethetőnek kell lennie, ezt szintén ellenőrzésre fog kerülni az adminisztrátor által. Majd egy szerződés, amellyel biztosításra kerül a fizetési kötelezettség. Opcionálisan megadható lesz a szakembernek földrajzi helyzetének adatai.
+A szükséges adatok ${SA}_{sz\acute{a}m}$ megadásakor minden felhasználónak kötelező a név és életkor kitöltése (\kovAzon{R\_\sorSzamR}). Szakembereknél mindenképpen megadásra kell kerülnie a kompetenciáknak, végzettségnek, ezeket előre megadott listából tudják kiválasztani. A munkatapasztalat megadásánál is vannak kötelező adatok: a munkával töltött évek száma, és a munkáihoz tartozó referencia, amelynek visszakövethetőnek kell lennie, ezt szintén ellenőrzésre fog kerülni az adminisztrátor által (\kovAzon{R\_\sorSzamR}). Majd egy szerződés, amellyel biztosításra kerül a fizetési kötelezettség (\kovAzon{R\_\sorSzamR}). Opcionálisan megadható lesz a szakembernek földrajzi helyzetének adatai (\kovAzon{R\_\sorSzamR}).
 
-\subsection{Szükséges adatok:}
+\subsection{Szükséges adatok}
 
 \begin{itemize}
     \item Mindenkinek:
@@ -30,6 +33,7 @@ A szükséges adatok ${SA}_{sz\acute{a}m}$ megadásakor minden felhasználónak 
             \item ${SA}_{5.1}$: Évek száma
             \item ${SA}_{5.1}$: Referencia
         \end{itemize}
+        \item  ${SA}_6$: Profilkép
     \end{itemize}
     
     \item Megadható:
@@ -38,9 +42,9 @@ A szükséges adatok ${SA}_{sz\acute{a}m}$ megadásakor minden felhasználónak 
     \end{itemize}
 \end{itemize}
 
-A regisztrációnál egyedi felhasználó nevet, illetve egy megfelelő erősségű jelszót kell megadnia az új felhasználónak, ami alapján egyrtelműen azonosítani lehet, illetve biztonságosan be tud lépni a fiókjába.
+A regisztrációnál egyedi felhasználó nevet, illetve egy megfelelő erősségű jelszót kell megadnia az új felhasználónak, ami alapján egyértelműen azonosítani lehet, illetve biztonságosan be tud lépni a fiókjába (\kovAzon{R\_\sorSzamR}).
 
-\subsection{Jelszó kritériumai:}
+\subsection{Jelszó kritériumai}
 
 \begin{itemize}
     \item $J_1$: legalább 8 karakter
@@ -50,23 +54,23 @@ A regisztrációnál egyedi felhasználó nevet, illetve egy megfelelő erőssé
     \item $J_5$: kétszer ugyanazt a jelszót kell megadni
 \end{itemize}
 
-\subsection{Felhasználónév kritériumai:}
+\subsection{Felhasználónév kritériumai}
 
 \begin{itemize}
     \item $F_1$: egyedinek kell lennie
     \item $F_2$: nem szerepelhet benne sértő szó
 \end{itemize}
 
-A regisztráció során szükség van az általános felhasználói szerződés elfogadására.
+A regisztráció során szükség van az általános szerződési feltételek elfogadására (\kovAzon{R\_\sorSzamR}).
 
-\subsection{ÁFSZ:}
+\subsection{ÁSZF}
 
 \begin{itemize}
-    \item $A_1$: az ÁFSZ-nek elérhetőnek kell lennie
-    \item $A_2$: a felhasználónak ki kell pipálnia egy checkboxot, amivel kijelenti, hogy megismerte és elfogadta a szerződésben foglaltakat.
+    \item $A_1$: Az ÁSZF-nek elérhetőnek kell lennie (\kovAzon{R\_\sorSzamR}).
+    \item $A_2$: A felhasználónak ki kell pipálnia egy jelölőnégyzetet, amivel kijelenti, hogy megismerte és elfogadta a szerződésben foglaltakat (\kovAzon{R\_\sorSzamR}).
 \end{itemize}
 
-A regisztráció végén a felhasználó kap egy emailt, amivel meg kell erősítenie a regisztráció során megadott email címet.
+A regisztráció végén a felhasználó kap egy emailt, amivel meg kell erősítenie a regisztráció során megadott email címet (\kovAzon{R\_\sorSzamR}).
 
 \begin{figure}[h]
 	\centering
